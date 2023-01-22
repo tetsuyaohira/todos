@@ -3,6 +3,7 @@ import TaskCard from "./TaskCard";
 import AddTaskCardButton from "./button/AddTaskCardButton";
 import {v4 as uuid} from 'uuid';
 import {DragDropContext, Droppable} from "react-beautiful-dnd";
+import styled from "styled-components";
 
 const TaskCards = () => {
     const taskCardId = uuid();
@@ -19,11 +20,18 @@ const TaskCards = () => {
         setTaskCards(newTaskCards);
     }
 
+    const StyledTaskCardsDiv = styled.div`
+      display: flex;
+      justify-content: flex-start;
+      align-items:flex-start;
+      flex-wrap: wrap;
+    `
+
     return (
         <DragDropContext onDragEnd={dragEndHandler}>
             <Droppable droppableId="taskCards" direction="horizontal">
                 {(provided) => (
-                    <div className="taskCardsArea"
+                    <StyledTaskCardsDiv
                          {...provided.droppableProps}
                          ref={provided.innerRef}
                     >
@@ -35,7 +43,7 @@ const TaskCards = () => {
                         <AddTaskCardButton
                             setTaskCards={setTaskCards}
                         />
-                    </div>
+                    </StyledTaskCardsDiv>
                 )}
             </Droppable>
         </DragDropContext>

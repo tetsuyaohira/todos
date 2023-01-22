@@ -1,4 +1,5 @@
 import {Draggable} from "react-beautiful-dnd";
+import styled from "styled-components";
 
 const Task = ({index, task, tasks, setTasks}) => {
 
@@ -8,8 +9,17 @@ const Task = ({index, task, tasks, setTasks}) => {
         setTasks((prev) => {
             return prev.filter((_task) => _task.id !== task.id)
         })
-
     }
+
+    const StyledButton = styled.button`
+      margin-right:9px;
+      border:none;
+      cursor:pointer;
+    `
+
+    const StyledTaskText = styled.div`
+      margin-left:12px;
+    `
 
     return (
         <Draggable index={index} draggableId={task.draggableId}>
@@ -20,10 +30,10 @@ const Task = ({index, task, tasks, setTasks}) => {
                     {...provided.draggableProps}
                     {...provided.dragHandleProps}
                 >
-                    <p className="taskText">{task.text}</p>
-                    <button className="taskTrashButton" onClick={() => clickHandler(task)}>
+                    <StyledTaskText >{task.text}</StyledTaskText>
+                    <StyledButton onClick={() => clickHandler(task)}>
                         <i className="fa-regular fa-trash-can"></i>
-                    </button>
+                    </StyledButton>
                 </div>
             }
 

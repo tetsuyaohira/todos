@@ -25,21 +25,21 @@ header {
 }
 
 
-.taskCardInputArea {
-    margin-bottom: 10px;
-    /*width: 30%;*/
-    cursor: pointer;
-}
+/*.taskCardInputArea {*/
+/*    margin-bottom: 10px;*/
+/*    !*width: 30%;*!*/
+/*    cursor: pointer;*/
+/*}*/
 
 
-.taskCardInput {
-    width: 80px;
-    font-size: 1.1rem;
-    padding:4px 6px;
-    border-radius: 3px;
-    border:none;
-    outline:none;
-}
+/*.taskCardInput {*/
+/*    width: 80px;*/
+/*    font-size: 1.1rem;*/
+/*    padding:4px 6px;*/
+/*    border-radius: 3px;*/
+/*    border:none;*/
+/*    outline:none;*/
+/*}*/
 
 .taskAddInput {
     width: 100%;
@@ -62,52 +62,52 @@ header {
     box-shadow: 1px 1px 1px 1px rgb(75,75,75);
 }
 
-.taskText {
-    margin-left:12px;
-}
+/*.taskText {*/
+/*    margin-left:12px;*/
+/*}*/
 
-.taskTrashButton {
-    margin-right:9px;
-    border:none;
-    cursor:pointer;
-}
+/*.taskTrashButton {*/
+/*    margin-right:9px;*/
+/*    border:none;*/
+/*    cursor:pointer;*/
+/*}*/
 
-.taskCardsArea {
-    display: flex;
-    justify-content: flex-start;
-    align-items:flex-start;
-    flex-wrap: wrap;
-}
+/*.taskCardsArea {*/
+/*    display: flex;*/
+/*    justify-content: flex-start;*/
+/*    align-items:flex-start;*/
+/*    flex-wrap: wrap;*/
+/*}*/
 
-.addTaskCardButtonArea {
-    margin-left: 1%;
-    margin-top: 25px;
-}
+/*.addTaskCardButtonArea {*/
+/*    margin-left: 1%;*/
+/*    margin-top: 25px;*/
+/*}*/
 
-.addTaskCardButton {
-    padding: 10px 18px;
-    border-radius: 9999px;
-    font-size:30px;
-    background-color: rgb(192, 200, 217);
-    box-shadow: 3px 3px 8px 1px black;
-    cursor: pointer;
-    transition: all 0.3s;
-}
+/*.addTaskCardButton {*/
+/*    padding: 10px 18px;*/
+/*    border-radius: 9999px;*/
+/*    font-size:30px;*/
+/*    background-color: rgb(192, 200, 217);*/
+/*    box-shadow: 3px 3px 8px 1px black;*/
+/*    cursor: pointer;*/
+/*    transition: all 0.3s;*/
+/*}*/
 
-.addTaskCardButton:hover {
-    box-shadow: none;
-    transform: translate(3px, 3px);
-}
+/*.addTaskCardButton:hover {*/
+/*    box-shadow: none;*/
+/*    transform: translate(3px, 3px);*/
+/*}*/
 
-.taskCardHeader {
-    display:flex;
-    justify-content: space-between;
-}
+/*.taskCardHeader {*/
+/*    display:flex;*/
+/*    justify-content: space-between;*/
+/*}*/
 
-.taskCardDeleteButton {
-    border:none;
-    cursor:pointer;
-    background-color: #e0e0e0;
-    font-size:16px;
-    color: #af1212;
-}
+/*.taskCardDeleteButton {*/
+/*    border:none;*/
+/*    cursor:pointer;*/
+/*    background-color: #e0e0e0;*/
+/*    font-size:16px;*/
+/*    color: #af1212;*/
+/*}*/
