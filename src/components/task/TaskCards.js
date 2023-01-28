@@ -5,6 +5,13 @@ import {v4 as uuid} from 'uuid';
 import {DragDropContext, Droppable} from "react-beautiful-dnd";
 import styled from "styled-components";
 
+const StyledTaskCardsDiv = styled.div`
+      display: flex;
+      justify-content: flex-start;
+      align-items:flex-start;
+      flex-wrap: wrap;
+    `
+
 const TaskCards = () => {
     const taskCardId = uuid();
     const [taskCards, setTaskCards] = useState([{
@@ -19,13 +26,6 @@ const TaskCards = () => {
         newTaskCards.splice(result.destination.index, 0, reorderedTaskCard);
         setTaskCards(newTaskCards);
     }
-
-    const StyledTaskCardsDiv = styled.div`
-      display: flex;
-      justify-content: flex-start;
-      align-items:flex-start;
-      flex-wrap: wrap;
-    `
 
     return (
         <DragDropContext onDragEnd={dragEndHandler}>

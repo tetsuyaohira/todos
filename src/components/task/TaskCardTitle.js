@@ -1,6 +1,20 @@
 import {useState} from "react";
 import styled from "styled-components";
 
+const StyledTaskCardInputAreaDiv = styled.div`
+      margin-bottom: 10px;
+      /*width: 30%;*/
+      cursor: pointer;
+    `
+const StyledTaskCardInputDiv = styled.input`
+      width: 80px;
+      font-size: 1.1rem;
+      padding:4px 6px;
+      border-radius: 3px;
+      border:none;
+      outline:none;
+    `
+
 const TaskCardTitle = () => {
 
     const [isEditing, setIsEditing] = useState(false);
@@ -23,34 +37,21 @@ const TaskCardTitle = () => {
         setIsEditing(false);
     }
 
-    const StyledDiv = styled.div`
-      margin-bottom: 10px;
-      /*width: 30%;*/
-      cursor: pointer;
-    `
-    const StyledInput = styled.input`
-      width: 80px;
-      font-size: 1.1rem;
-      padding:4px 6px;
-      border-radius: 3px;
-      border:none;
-      outline:none;
-    `
-
     return (
-        <StyledDiv onClick={clickHandler} >
+        <StyledTaskCardInputAreaDiv onClick={clickHandler} >
             {isEditing ?
                 <form onSubmit={submitHandler}>
-                    <StyledInput
+                    <StyledTaskCardInputDiv
                            onChange={changeHandler}
                            onBlur={blurHandler}
                            autoFocus
                            maxLength={20}
-                           value={title}></StyledInput>
+                           value={title}>
+                    </StyledTaskCardInputDiv>
                 </form>
                 : <h3>{title}</h3>
             }
-        </StyledDiv>
+        </StyledTaskCardInputAreaDiv>
     )
 }
 
