@@ -1,7 +1,7 @@
 import Task from "./Task";
 import {DragDropContext, Droppable} from "react-beautiful-dnd";
 
-const Tasks = ({inputText, tasks, setTasks}) => {
+const Tasks = ({tasks, setTasks}) => {
     const dragEndHandler = (result) => {
         if (!result.destination) return;
 
@@ -22,7 +22,6 @@ const Tasks = ({inputText, tasks, setTasks}) => {
                                     <Task
                                         index={index}
                                         task={task}
-                                        tasks={tasks}
                                         setTasks={setTasks}
                                     />
                                 </div>

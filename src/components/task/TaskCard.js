@@ -1,9 +1,22 @@
 import {useState} from "react";
 import TaskCardDeleteButton from "./button/TaskCardDeleteButton";
 import TaskCardTitle from "./TaskCardTitle";
-import TaskAddInput from "./input/TaskAddInput";
+import TaskCardInput from "./input/TaskCardInput";
 import Tasks from "./Tasks";
 import {Draggable} from "react-beautiful-dnd";
+import styled from "styled-components";
+
+const StyledTaskCardDiv = styled.div`
+      width:250px;
+      padding: 10px 25px;
+      margin: 10px 1%;
+      background-color: #e0e0e0;
+      border-radius: 5px;
+    `
+const StyledTaskCardHeaderDiv = styled.div`
+      display:flex;
+      justify-content: space-between;
+    `
 
 const TaskCard = ({index, taskCard, setTaskCards}) => {
 
@@ -13,28 +26,26 @@ const TaskCard = ({index, taskCard, setTaskCards}) => {
     return (
         <Draggable draggableId={taskCard.id} index={index}>
             {(provided) => (
-                <div className="taskCard"
+                <StyledTaskCardDiv className="taskCard"
                      {...provided.draggableProps}
                      ref={provided.innerRef}
                 >
-                    <div className="taskCardHeader"
+                    <StyledTaskCardHeaderDiv
                          {...provided.dragHandleProps}>
                         <TaskCardTitle/>
                         <TaskCardDeleteButton
                             taskCard={taskCard}
                             setTaskCards={setTaskCards}
                         />
-                    </div>
-                    <TaskAddInput
+                    </StyledTaskCardHeaderDiv>
+                    <TaskCardInput
                         inputText={inputText}
                         setInputText={setInputText}
-                        tasks={tasks}
                         setTasks={setTasks}
                     />
-                    <Tasks inputText={inputText}
-                           tasks={tasks}
+                    <Tasks tasks={tasks}
                            setTasks={setTasks}/>
-                </div>
+                </StyledTaskCardDiv>
             )}
         </Draggable>
 

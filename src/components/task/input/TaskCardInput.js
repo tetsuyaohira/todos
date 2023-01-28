@@ -1,6 +1,15 @@
 import {v4 as uuid } from 'uuid';
+import styled from "styled-components";
 
-const TaskCardInput = ({inputText, setInputText, tasks, setTasks}) => {
+const StyledInput = styled.input`
+  width: 100%;
+  font-size:1.3rem;
+  border-radius: 3px;
+  border:none;
+  outline:none;
+`
+
+const TaskCardInput = ({inputText, setInputText, setTasks}) => {
 
     const submitHandler = (e) => {
         e.preventDefault()
@@ -25,10 +34,9 @@ const TaskCardInput = ({inputText, setInputText, tasks, setTasks}) => {
     return (
         <div>
             <form onSubmit={submitHandler}>
-                <input type="text"
+                <StyledInput type="text"
                        onChange={changeHandler}
                        placeholder="Add a task"
-                       className="taskAddInput"
                        value={inputText}/>
             </form>
         </div>

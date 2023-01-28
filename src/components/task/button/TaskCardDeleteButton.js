@@ -1,4 +1,14 @@
-const TaskCardDeleteButton = ({taskCard,setTaskCards}) => {
+import styled from "styled-components";
+
+const StyledDiv = styled.div`
+      border: none;
+      cursor: pointer;
+      background-color: #e0e0e0;
+      font-size: 16px;
+      color: #af1212;
+    `
+
+const TaskCardDeleteButton = ({taskCard, setTaskCards}) => {
 
     const taskCardDeleteButton = (id) => {
         setTaskCards((prev) => {
@@ -8,10 +18,10 @@ const TaskCardDeleteButton = ({taskCard,setTaskCards}) => {
 
     return (
         <div>
-            <button className="taskCardDeleteButton"
-                    onClick={() => taskCardDeleteButton(taskCard.id)}>
+            <StyledDiv
+                onClick={() => taskCardDeleteButton(taskCard.id)}>
                 <i className="fas fa-times"></i>
-            </button>
+            </StyledDiv>
         </div>
     )
 }
